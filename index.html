@@ -2,11 +2,15 @@
 <html lang="en" ng-app="myApp">
     <head>
         <meta charset="UTF-8">
-        <title>Angular</title>
+        <title>Anime List with Angular</title>
+        <link href="css/style.css" rel="stylesheet">
         <script src="lib/angular/angular.min.js"></script>
+        <script src="lib/angular/angular-route.min.js"></script>
+        <script src="lib/angular/angular-animate.min.js"></script>
         <script src="js/controllers.js"></script>
-        
+        <script src="js/app.js"></script>
     </head>
     <body>
+        <div ng-view></div>
     </body>
 </html>

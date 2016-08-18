@@ -1,0 +1,31 @@
+<section>
+    <div class="search">
+        <h1>Anime List</h1>
+        <label>Search: </label>
+        <input ng-model="query" placeholder="Search Animes" autofocus>
+
+        <label class="formgroup">order by:
+            <select ng-model="order">
+                <option value="default">Default</option>
+                <option value="animeTitle">Title</option>
+                <option value="animeAuthor">Author</option>
+            </select>
+        </label>
+        <label class="formgroup">
+            <input type="radio" ng-model="direction" name="direction" checked> ascending
+        </label>
+        <label class="formgroup">
+            <input type="radio" ng-model="direction" name="direction" value="reverse"> descending
+        </label>
+    </div>
+    <ul class="animeList">
+        <li ng-animate="'animate'" class="anime cf" ng-repeat="item in animes | limitTo: 5 | filter: query | orderBy: order:direction">
+            <a href="#/details/{{animes.indexOf(item)}}">
+                <div class="info">
+                    <h2>{{item.animeTitle}}</h2>
+                    <p>{{item.animeAuthor}}</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+</section>

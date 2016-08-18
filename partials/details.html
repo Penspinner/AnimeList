@@ -1,0 +1,12 @@
+<section class="anime-info">
+    <div class="anime cf" ng-model="animes">
+        <a href="#/details/{{prevItem}}" class="btn btn-left">&lt;</a>
+        <a href="#/details/{{nextItem}}" class="btn btn-right">&gt;</a>
+        <h1>{{animes[whichItem].animeTitle}}</h1>
+        <div class="info">
+            <h3>{{animes[whichItem].animeAuthor}}</h3>
+            <div class="summary">{{animes[whichItem].animeSummary}}</div>
+        </div>
+    </div>
+    <a href="/#list">&laquo; Back to search</a>
+</section>
